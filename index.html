@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <base href="/">
+
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+
+  <!-- SEO -->
+  <title>Sainath Impex — Industrial Sewing Machines | JUKI, TSOL, JACK, SONEX, ZOJE</title>
+  <meta name="description" content="Sainath Impex — Premium industrial sewing machines from leading brands. Explore professional sewing machines from JUKI, TSOL, JACK, SONEX, and ZOJE. Quality machines for every requirement.">
+  <meta name="keywords" content="sewing machines, industrial sewing machines, JUKI, TSOL, JACK, SONEX, ZOJE, Sainath Impex, sewing machine dealer">
+  <meta name="author" content="Sainath Impex">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sainath Impex — Industrial Sewing Machines">
+  <meta property="og:description" content="Explore professional sewing machines from leading brands, carefully selected by Sainath Impex.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Sainath Impex">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#0B2046">
+  <meta name="msapplication-navbutton-color" content="#0B2046">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#0B2046">
+
+  <!-- iOS meta tags -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Sainath Impex">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png"/>
+
+  <!-- DNS Prefetch & Preconnect for High-Speed Assets and API Calls -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://api.airtable.com">
+  <link rel="preconnect" href="https://api.airtable.com" crossorigin>
+  <link rel="dns-prefetch" href="https://dl.airtableusercontent.com">
+  <link rel="preconnect" href="https://dl.airtableusercontent.com" crossorigin>
+  <link rel="dns-prefetch" href="https://images.weserv.nl">
+  <link rel="preconnect" href="https://images.weserv.nl" crossorigin>
+
+  <!-- Preload Core Fonts to prevent layout shift / FOUT -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Ubuntu:wght@700&display=swap">
+
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    /* Loading screen styles matching Sainath Impex brand */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #FAFAF8;
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      overflow: hidden;
+    }
+    .loading-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+    }
+    .loading-logo {
+      height: 180px;
+      max-width: 280px;
+      margin-bottom: 28px;
+      object-fit: contain;
+    }
+    .loading-bar {
+      width: 120px;
+      height: 2px;
+      background-color: #EAECEA;
+      border-radius: 1px;
+      overflow: hidden;
+    }
+    .loading-bar-fill {
+      width: 40%;
+      height: 100%;
+      background-color: #C9A84C;
+      border-radius: 1px;
+      animation: loading 1.2s ease-in-out infinite;
+    }
+    @keyframes loading {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(350%); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading indicator shown while Flutter initializes -->
+  <div class="loading-screen" id="loading-screen">
+    <img src="favicon.png" alt="Sainath Impex Logo" class="loading-logo" />
+    <div class="loading-bar">
+      <div class="loading-bar-fill"></div>
+    </div>
+  </div>
+
+  <script>
+    // Remove loading screen when Flutter is ready
+    window.addEventListener('flutter-first-frame', function () {
+      const loader = document.getElementById('loading-screen');
+      if (loader) {
+        loader.style.transition = 'opacity 0.25s ease';
+        loader.style.opacity = '0';
+        setTimeout(() => loader.remove(), 250);
+      }
+    });
+  </script>
+
+  <script src="flutter_bootstrap.js" async></script>
+</body>
+</html>
